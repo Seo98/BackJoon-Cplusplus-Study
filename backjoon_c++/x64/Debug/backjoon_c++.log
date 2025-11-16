@@ -1,0 +1,4 @@
+﻿  backjoon_c++.cpp
+C:\Users\user\source\repos\backjoon_c++\backjoon_c++\backjoon_c++.cpp(9,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\user\source\repos\backjoon_c++\backjoon_c++\backjoon_c++.cpp(15,6): warning C4101: 'n' :참조되지 않은 지역 변수입니다.
+  backjoon_c++.vcxproj -> C:\Users\user\source\repos\backjoon_c++\x64\Debug\backjoon_c++.exe
