@@ -8,6 +8,24 @@ using namespace std;
 
 void main()
 {
+	std::string name, phone;
+	int age;
+
+	std::cout << "당신의 이름을 입력하세요: ";
+	std::cin >> name;
+
+	std::cout << "당신의 나이를 입력하세요: ";
+	std::cin >> age;
+
+	std::cout << "당신의 전화번호를 입력하세요: ";
+	std::cin >> phone;
+	std::cout << std::endl << "안녕하세요, " << name << "님." << std::endl;
+	std::cout << "당신의 나이는 " << age << "살이고 "
+		<< "전화번호는 " << phone << "이군요!" << std::endl;
+
+	//
+	int age;
+
 	int a = 1;
 
 	int* b = &a; // a라는 변수의 주소값을 포인터 변수 a에 저장
@@ -17,7 +35,7 @@ void main()
 	cout << "Hello World!" << endl;
 	cout << "a: " << a << endl;
 
-	
+
 	std::cout << x << '\n';  // print the value of variable x
 	std::cout << &x << '\n'; // print the memory address of variable x
 	std::cout << *&x << '\n';
@@ -25,9 +43,9 @@ void main()
 	cout << b << endl;
 
 	// prints:
-    // 5
-    // 0027FEA0
-    // 5
+	// 5
+	// 0027FEA0
+	// 5
 }
 
 
