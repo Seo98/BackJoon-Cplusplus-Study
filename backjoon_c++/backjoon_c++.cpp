@@ -6,10 +6,11 @@
 #include <queue>
 using namespace std;
 
+/*
 void main()
 {
 	std::string name, phone;
-	int age;
+	int age = 2;
 
 	std::cout << "당신의 이름을 입력하세요: ";
 	std::cin >> name;
@@ -22,9 +23,6 @@ void main()
 	std::cout << std::endl << "안녕하세요, " << name << "님." << std::endl;
 	std::cout << "당신의 나이는 " << age << "살이고 "
 		<< "전화번호는 " << phone << "이군요!" << std::endl;
-
-	//
-	int age;
 
 	int a = 1;
 
@@ -46,7 +44,125 @@ void main()
 	// 5
 	// 0027FEA0
 	// 5
+
+		int a;
+	cin >> a;
+
+	vector<int> ab(a);
+
+	for (int i = 0; i < a; i++)
+	{
+		ab[i] = i + 1;
+		cout << ab[i] << endl;
+	}
+	*/
+
+	/*
+	int a,b,c;
+	cin >> a
+		>> b
+		>> c;
+
+	int hop = a + b - c;
+	cout << hop << "\n";
+
+	string hop2 = to_string(a) + to_string(b);
+	int hop_int = stoi(hop2);
+
+	hop_int -= c;
+
+	cout << hop_int;
 }
+*/
+
+/*
+* begin()
+리스트의 시작 이터레이터를 반환한다.
+end()
+리스트의 마지막 이터레이터를 반환한다.
+*/
+
+/*
+리스트 삽입
+emplace(이터레이터, 값)
+해당 이터레이터 위치 앞에 값 삽입
+emplace_front(값)
+리스트 맨 앞에 요소 추가
+push_front(값)
+리스트 맨 앞에 요소 추가
+emplace_back(값)
+리스트 맨 뒤에 요소 추가
+push_back(값)
+리스트 맨 뒤에 요소 추가
+insert(이터레이터, 값)
+해당 이터레이터 위치 앞에 값 추가
+emplace와 push의 차이는 필자가 좀 더 고급화가 되면 글로 써볼까 한다.
+*/
+
+/*
+pop_front()
+첫 번째 요소를 삭제한다.
+
+pop_back()
+마지막 요소를 삭제한다.
+
+erase(이터레이터)
+이터레이터 위치의 요소를 삭제한다. 이터레이터를 1개 더 써줄 경우엔 처음 이터레이터부터 마지막까지 삭제한다.
+
+clear()
+리스트의 모든 요소를 삭제한다.
+*/
+
+/*
+remove(값)
+리스트안에 값과 같은 요소를 제거한다. (==연산)
+
+remove_if(bool함수)
+리스트 안에 해당 조건을 만족하는 값을 제거 함
+
+용량 관련 함수
+size()
+리스트의 크기를 반환함
+
+max_size()
+리스트의 최대 크기를 반환함
+
+empty()
+리스트에 요소가 존재하는지 반환(bool)
+
+resize()
+리스트의 크기를 재설정함. 만약 바꾸고자하는 크기가 리스트보다 작다면 뒤쪽이 짤림
+
+그 외의 함수들
+splice(이터레이터, 리스트)
+이터레이터를 기준으로 리스트를 뒤에 붙힌다.
+
+unique()
+연속되는 중복을 제거한다.
+
+전체 요소의 중복을 제거하기 위해 sort()와 같이 사용할 수 있다.
+
+매개변수로 bool fuc(자료형1, 자료형2) {} 로 함수를 넣게 되면 n번째 요소와 n+1번째 변수를 연산해 참일 경우
+
+n+1번째 요소를 삭제한다.
+
+sort()
+오름차순 정렬을 한다.
+
+매개변수로 bool fuc(자료형1, 자료형2) {} 을 넣으면 조건을 지정하여 정렬할 수 있다.
+
+merge()
+합병 정렬을 한다.
+
+sort()와 같이 매개변수에 비교함수를 넣어주면 원하는 조건하에 정렬이 가능하다.
+
+swap(리스트)
+리스트를 요소를 서로 바꾼다.
+
+reverse()
+리스트를 거꾸로 바꾼다.
+*/
+
 
 
 
