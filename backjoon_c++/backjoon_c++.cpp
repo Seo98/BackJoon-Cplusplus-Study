@@ -209,6 +209,7 @@ void func2()
 	// find(v.begin(), v.end(), _s);
 }
 
+// 최대 공약수
 int gcd(int a, int b) {
 	int c;
 	while (b != 0)
@@ -219,11 +220,12 @@ int gcd(int a, int b) {
 	}
 	return a;
 }
-
+// 최소 공배수
 int lcm(int a, int b) {
 	return a * b / gcd(a, b);
 }
 
+// 약수의 합
 int getDivNum(int num) {
 	if (num == 1) {
 		return 1;
@@ -239,6 +241,7 @@ int getDivNum(int num) {
 	return answer;
 }
 
+// 숫자의 자리수 
 int solution(int n) {
 	int answer = 0;
 	while (n != 0) {
@@ -248,3 +251,41 @@ int solution(int n) {
 	}
 	return answer;
 }
+
+// 이진탐색
+/*
+int start=0;
+int end=n-1;
+while(start<=end){
+	int mid=(start+end)/2;
+	if(vec[mid]==찾는수){
+		//~~
+	}
+	else if(vec[mid]>찾는수){
+		end=mid-1;
+	}
+	else{
+		start=mid+1;
+	}
+
+}
+*/
+
+// DFS
+/*
+vector<vector<int>> graph;
+bool dfs_visit[NODE];
+
+void dfs(int cur_node){
+	if(dfs_visit[cur_node])
+		return;
+
+	dfs_visit[cur_node]=true;
+
+	cout<<cur_node+1<<" ";
+
+	for(int i=0;i<graph[cur_node].size();i++){
+		dfs(graph[cur_node][i]);
+	}
+}
+*/
