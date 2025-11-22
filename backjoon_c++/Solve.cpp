@@ -5,10 +5,11 @@
 #include <iostream>
 #include <queue>
 #include <list>
+#include <numeric>
+#include <cmath>
 
 using namespace std;
 
-#pragma region MyRegion
 // 1부터 n까지 모든 소수 출력
 void isPrime3(int n) 
 {
@@ -29,7 +30,7 @@ void isPrime3(int n)
         }
     }
 }
-// O(√n)
+// O(√n) 소수출력
 bool checkPrime(int n)  // n이 소수인지 true/false로 알려줌
 {
     if (n < 2) return false;
@@ -92,23 +93,45 @@ int lcm(int a, int b)
 {
     return a * b / gcd(a, b);
 }
-#pragma endregion
 
 int main()
 {
-    int n;
-    while (cin >> n) 
+    int nanjange[9];
+    int hop = 0;
+    vector<int> jongdop;
+
+    for (int i = 0; i < 9; i++)
     {
-        int c = 1;
-        int r = 1 % n;
-
-        while (r != 0) // 0으로 나눠 떨어지지 않는다면? 계속반복
-        { 
-            r = (r * 10 + 1) % n; // 11, 111, 1111 
-            c++;
-        }
-
-        cout << c << '\n';   
+        cin >> nanjange[i];
     }
-    return 0;
+
+    for (int i = 0; i < 9; i++)
+    {
+        for (int j = i + 1; j < 9; j++)
+        {
+            hop = 0;
+
+            for (int k = 0; k < 9; k++)
+            {
+                if (k == i || k == j) continue;
+                hop += nanjange[k];
+            }
+
+            if (hop == 100)
+            {
+                for (int k = 0; k < 9; k++)
+                {
+                    if (k == i || k == j) continue;
+                    jongdop.push_back(nanjange[k]);
+                }
+
+                sort(jongdop.begin(), jongdop.end());
+
+                for (int val : jongdop)
+                    cout << val << "\n";
+
+                return 0;
+            }
+        }
+    }
 }
